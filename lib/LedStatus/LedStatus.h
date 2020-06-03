@@ -9,9 +9,12 @@ private:
   byte _greenPin;
   byte _bluePin;
 
+  unsigned long _startedMilliseconds;
+
   void _blink(byte, unsigned long);
   void _flash(byte, unsigned long);
-
+  void _off(byte);
+  void _on(byte);
 public:
   LedStatus(byte, byte, byte);
 
@@ -22,6 +25,16 @@ public:
   void flashRed(unsigned long);
   void flashGreen(unsigned long);
   void flashBlue(unsigned long);
+
+  void offRed();
+  void offGreen();
+  void offBlue();
+
+  void onRed();
+  void onGreen();
+  void onBlue();
+
+  void begin();
 };
 
 #endif
